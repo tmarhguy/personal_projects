@@ -42,10 +42,9 @@ public class passwordGenerator {
     static String generatePassword() {
         while (!isValidPassword(password)){
             move = random.nextInt(4);
-            password += generate(move);
             pass.append(generate(move));
+            password = pass.toString();
     }
-        password = pass.toString();
     return password;
     }
 
